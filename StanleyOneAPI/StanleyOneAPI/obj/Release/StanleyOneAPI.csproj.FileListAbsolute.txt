@@ -1,0 +1,16 @@
+D:\Dipen site\StanleyOneAPI\StanleyOneAPI\StanleyOneAPI\bin\StanleyOneAPI.dll.config
+D:\Dipen site\StanleyOneAPI\StanleyOneAPI\StanleyOneAPI\bin\StanleyOneAPI.dll
+D:\Dipen site\StanleyOneAPI\StanleyOneAPI\StanleyOneAPI\bin\StanleyOneAPI.pdb
+D:\Dipen site\StanleyOneAPI\StanleyOneAPI\StanleyOneAPI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Dipen site\StanleyOneAPI\StanleyOneAPI\StanleyOneAPI\bin\Newtonsoft.Json.dll
+D:\Dipen site\StanleyOneAPI\StanleyOneAPI\StanleyOneAPI\bin\System.Net.Http.Formatting.dll
+D:\Dipen site\StanleyOneAPI\StanleyOneAPI\StanleyOneAPI\bin\System.Web.Http.dll
+D:\Dipen site\StanleyOneAPI\StanleyOneAPI\StanleyOneAPI\bin\System.Web.Http.WebHost.dll
+D:\Dipen site\StanleyOneAPI\StanleyOneAPI\StanleyOneAPI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Dipen site\StanleyOneAPI\StanleyOneAPI\StanleyOneAPI\bin\Newtonsoft.Json.xml
+D:\Dipen site\StanleyOneAPI\StanleyOneAPI\StanleyOneAPI\bin\System.Net.Http.Formatting.xml
+D:\Dipen site\StanleyOneAPI\StanleyOneAPI\StanleyOneAPI\bin\System.Web.Http.xml
+D:\Dipen site\StanleyOneAPI\StanleyOneAPI\StanleyOneAPI\bin\System.Web.Http.WebHost.xml
+D:\Dipen site\StanleyOneAPI\StanleyOneAPI\StanleyOneAPI\obj\Release\StanleyOneAPI.csproj.CoreCompileInputs.cache
+D:\Dipen site\StanleyOneAPI\StanleyOneAPI\StanleyOneAPI\obj\Release\StanleyOneAPI.dll
+D:\Dipen site\StanleyOneAPI\StanleyOneAPI\StanleyOneAPI\obj\Release\StanleyOneAPI.pdb

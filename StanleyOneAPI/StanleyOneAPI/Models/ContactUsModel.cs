@@ -41,8 +41,7 @@ namespace StanleyOneAPI.Models
                 contact.message=  "Username: " + contact.userName + "<br/>" +
                                     "Email: " + contact.email + "<br/>" +
                                    "Message:" +contact.message+ "<br/>" +
-                                    "Team Prabhat" + "<br/>" +
-                                    "Expense Management";
+                                    "StanleyOne";
             
 
                 }
@@ -57,7 +56,7 @@ namespace StanleyOneAPI.Models
         public string sendEmail(ContactUsModel mailData)
             {
 
-            string status = "success";
+            string status = "";
 
             try
                 {
@@ -83,7 +82,7 @@ namespace StanleyOneAPI.Models
                 client.UseDefaultCredentials = false;
                 client.Credentials = new System.Net.NetworkCredential(fromEmail, password);
                 client.Send(sendMail);
-
+                status = "success";
                 }
 
             catch (Exception ex)

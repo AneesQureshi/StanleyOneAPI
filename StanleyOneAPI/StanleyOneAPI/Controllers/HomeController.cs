@@ -29,5 +29,23 @@ namespace StanleyOneAPI.Controllers
 
             return Ok(status);
             }
+
+        [Route("api/HomeController/CheckApi")]
+        [HttpPost]
+        public IHttpActionResult Check(ContactUsModel contact)
+            {
+
+            string status = "";
+            try
+                {
+                status = "success1";
+                }
+            catch (Exception ex)
+                {
+                string msg = ex.Message;
+                }
+
+            return Ok(status);
+            }
         }
 }
