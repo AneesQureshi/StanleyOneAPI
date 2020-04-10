@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.IO;
 using System.Linq;
 using System.Net.Mail;
 using System.Web;
+using System.Web.Script.Serialization;
+using StanleyOneAPI.CommonHelper;
 
 namespace StanleyOneAPI.Models
     {
@@ -55,17 +58,26 @@ namespace StanleyOneAPI.Models
 
         public string sendEmail(ContactUsModel mailData)
             {
+            Log log = new Log();
+            //for serialization of object
+            //var json = new JavaScriptSerializer().Serialize(mailData);
+            //JavaScriptSerializer jsserialize = new JavaScriptSerializer();
+            //string output = jsserialize.Serialize(mailData);
+            //JavaScriptSerializer serializer = new JavaScriptSerializer();
+            //string strout = serializer.Serialize(mailData);
+           
 
             string status = "";
+            string emailDisplayHeader = ConfigurationManager.AppSettings["emailDisplayHeader"];
+            //string appname = ConfigurationManager.AppSettings["AppName"];
+            string fromEmail = ConfigurationManager.AppSettings["fromEmail"];
+            string toEmail = ConfigurationManager.AppSettings["toEmail"];
+            string password = ConfigurationManager.AppSettings["password"];
+            string host = ConfigurationManager.AppSettings["host"];
 
             try
                 {
-                string emailDisplayHeader = ConfigurationManager.AppSettings["emailDisplayHeader"];
-                //string appname = ConfigurationManager.AppSettings["AppName"];
-                string fromEmail = ConfigurationManager.AppSettings["fromEmail"];
-                string toEmail = ConfigurationManager.AppSettings["toEmail"];
-                string password = ConfigurationManager.AppSettings["password"];
-                string host = ConfigurationManager.AppSettings["host"];
+               
 
                 MailMessage sendMail = new MailMessage();
                 sendMail.From = new MailAddress(fromEmail);
@@ -83,11 +95,14 @@ namespace StanleyOneAPI.Models
                 client.Credentials = new System.Net.NetworkCredential(fromEmail, password);
                 client.Send(sendMail);
                 status = "success";
+                
+                log.WriteErrorLog(fromEmail +" => "+ toEmail+ " => TO---------------Mail sent successfully---✔✔✔✔✔✔✔✔✔✔");
                 }
 
             catch (Exception ex)
                 {
-                string msg = ex.Message;
+                log.WriteErrorLog(fromEmail +" => "+ toEmail + "TO***************Mail not sent***✖✖✖✖✖✖✖✖✖✖");
+                log.WriteExceptionLog(ex);
                 }
             
             return status;
